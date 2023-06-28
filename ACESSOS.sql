@@ -23,7 +23,7 @@ SELECT DISTINCT
 WHERE --R.GR__RL_ID = '000929'
       --G.GR__ID = '000474 '
       -- R.GR__RL_CODIGO LIKE '%FECH%'
-      U.USR_CODIGO = 'rosangela.brito' AND
+      U.USR_CODIGO = '' AND
       --U.USR_NOME = 'Luiz Henrique dos Santos Salmaso'
      F.RL__ROTINA = 'FINA130'
 

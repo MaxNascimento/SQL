@@ -13,7 +13,7 @@ SELECT DISTINCT U.USR_ID ID,
                 --UM.USR_ACESSO,
                -- UM.USR_MODULO
               
-               /* RF.RL__ROTINA ROTINA,
+                RF.RL__ROTINA ROTINA,
                 RF.RL__ITEM ITEM,
                 RF.RL__DESMDEF OPCAO,
                 DECODE(RF.RL__ACESSO,
@@ -22,7 +22,7 @@ SELECT DISTINCT U.USR_ID ID,
                        '2',
                        'NÃO PERMITIDO',
                        '3',
-                       'NEGADO') ACESSO */
+                       'NEGADO') ACESSO 
 
   FROM TMPROD.SYS_USR U
   LEFT JOIN TMPROD.SYS_USR_GROUPS UG
@@ -36,7 +36,7 @@ SELECT DISTINCT U.USR_ID ID,
     
  LEFT JOIN  TMPROD.SYS_USR_MODULE UM
  ON UM.USR_ID = U.USR_ID
-/*  LEFT JOIN TMPROD.SYS_RULES_FEATURES RF
+ LEFT JOIN TMPROD.SYS_RULES_FEATURES RF
     ON RF.RL__ID = GR.GR__RL_ID
     OR RF.RL__ID = UR.USR_RL_ID
   LEFT JOIN TMPROD.SYS_RULES_TRANSACT RT
@@ -44,9 +44,6 @@ SELECT DISTINCT U.USR_ID ID,
     OR RT.RL__ID = UR.USR_RL_ID*/
 
  WHERE 
- G.GR__ID IS NULL AND
-UM.USR_ACESSO = 'T' 
---UM.USR_MODULO =  '99' OR UM.USR_MODULO = '98'
---U.USR_ID =  '001349'  OR
---U.USR_CODIGO = 'rogerio.junior'
---UR.USR_RL_ID  = '001318' OR GR.GR__RL_ID = '001318'
+ G.GR__ID = ' ' 
+
+
